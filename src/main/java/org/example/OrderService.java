@@ -17,6 +17,9 @@ public class OrderService {
         }
         System.out.println("Общая стоимость: "+sumPrice);
     }
-
+public void clearCurrentCart (Busket cart){
+        cart.clearCart();
+    System.out.println("В корзине пусто ");
+}
 
 }
