@@ -13,13 +13,12 @@ public class Busket {
 
 
 
-    public  Busket putIntoBusket (Product p, Busket cart){
+    public  void putIntoBusket (Product p ){
         System.out.println("Выберите товар для добавления в корзину ");
-        cart.busket.add(p);
-        return cart;
+        busket.add(p);
+
     }
-    public Busket clearCart (Busket cart){
-        cart.busket.clear();
-        return cart;
+    public void clearCart (){
+        busket.clear();
     }
 }

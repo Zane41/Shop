@@ -10,6 +10,7 @@ public class OrderService {
 
     public void doOrder (Busket cart){
         double sumPrice =0;
+        System.out.println("Товары в Вашей корзине: ");
         for (Product product:cart.busket) {
             sumPrice += product.cost;
             System.out.println(product);

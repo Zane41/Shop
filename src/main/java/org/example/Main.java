@@ -13,10 +13,10 @@ public class Main {
 
 
         ProductService.printPS(ProductService.createService());
-        cart1.putIntoBusket(list1.search(list1.createService()), cart1);
-        cart1.putIntoBusket(list1.search(list1.createService()), cart1);
+        cart1.putIntoBusket(list1.search(list1.createService()));
+        cart1.putIntoBusket(list1.search(list1.createService()));
         order1.doOrder(cart1);
-        cart1.clearCart(cart1);
+        cart1.clearCart();
 
     }
 }
