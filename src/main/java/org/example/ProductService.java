@@ -1,5 +1,6 @@
 package org.example;
 
+
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -8,9 +9,10 @@ import java.util.Scanner;
 
 @Component
 public class ProductService {
-    public static ArrayList<Product> createService (){
-    ArrayList<Product> prdctSrvc = new ArrayList<>();
-    prdctSrvc.add(new Product(100, "Бельгийский стаут", 269.55));
+
+    public static ArrayList<Product> createService() {
+        ArrayList<Product> prdctSrvc = new ArrayList<>();
+        prdctSrvc.add(new Product(100, "Бельгийский стаут", 269.55));
         prdctSrvc.add(new Product(112, "IPA", 369.55));
         prdctSrvc.add(new Product(82, "Василеостровское светлое", 169.55));
         prdctSrvc.add(new Product(11, "Пять озёр", 450.05));
@@ -22,19 +24,25 @@ public class ProductService {
         prdctSrvc.add(new Product(666, "Портвейн 777", 26.66));
         return prdctSrvc;
     }
-    public static void printPS (ArrayList<Product> d){
+
+    public static void printPS(ArrayList<Product> d) {
         d.sort(Product::compareTo);
-        for (Product p:d)
+        for (Product p : d)
             System.out.println(p);
     }
-    public static void search (ArrayList<Product> d){
+
+    public static Product search(ArrayList<Product> d) {
         System.out.println("Введи название товара ");
         Scanner vvod = new Scanner(System.in);
         String nameOfGood = vvod.nextLine();
-        for (Product p:d)
+        Product toRet = null;
+        for (Product p : d) {
             if (Objects.equals(p.name, nameOfGood)) {
                 System.out.println(p);
+                toRet = p;
                 break;
             }
+        }
+        return toRet;
     }
 }

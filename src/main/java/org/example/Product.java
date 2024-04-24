@@ -1,8 +1,14 @@
 package org.example;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
 public class Product implements Comparable<Product> {
+
+
+
     int id; String name; double cost;
 
     public Product(int id, String name, double cost) {
