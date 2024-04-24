@@ -14,7 +14,7 @@ public class Busket {
 
 
     public  void putIntoBusket (Product p ){
-        System.out.println("Выберите товар для добавления в корзину ");
+
         busket.add(p);
 
     }
